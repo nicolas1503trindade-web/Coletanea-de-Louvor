@@ -16,31 +16,30 @@ body{
     max-width: 1000px;
     margin: auto;
     padding: 20px;
-    padding-bottom: 120px; /* Espaço para impedir que a logo fixa cubra as letras ao rolar até ao fim */
+    padding-bottom: 140px; /* Espaço para o logo maior não cobrir o conteúdo */
 
     color: #222;
 }
 
-/* Logótipo fixo no fundo da página */
+/* Logótipo fixo no fundo (sem targa branca, maior e com blur/sombra escura) */
 .logo-bg{
     position: fixed;
-    bottom: 0;
+    bottom: 15px;
     left: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
-    background: rgba(255, 255, 255, 0.92); /* Fundo suave para dar visibilidade */
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    background: transparent; /* Remove a targa / fundo branco */
     pointer-events: none;
     z-index: 1000;
 }
 
 .logo-bg img{
-    max-height: 60px;
+    max-height: 90px; /* Tamanho maior para o logo */
     width: auto;
-    mix-blend-mode: multiply;
+    /* Efeito de sombra/blur escuro ao redor do texto da imagem */
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.7)) drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.5));
 }
 
 /* Título */
@@ -117,11 +116,11 @@ h1{
 
     body{
         padding: 12px;
-        padding-bottom: 90px;
+        padding-bottom: 110px;
     }
 
     .logo-bg img{
-        max-height: 45px;
+        max-height: 65px;
     }
 
     .letra{

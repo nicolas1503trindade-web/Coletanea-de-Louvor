@@ -21,23 +21,31 @@ body{
     color: #222;
 }
 
-/* Logótipo fixo no fundo (sem targa branca, maior e com blur/sombra escura) */
-.logo-bg{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent; /* Remove a targa / fundo branco */
-    pointer-events: none;
-    z-index: 1000;
+/* Tamanho Padrão (Notebooks e Monitores) */
+.logo-bg img{
+    max-height: 100px; /* Tamanho no computador */
+    width: auto;
 }
 
-.logo-bg img{
-    max-height: 500; /* Tamanho maior para o logo */
-    width: auto;
+/* Regras exclusivas para Celular */
+@media (max-width: 768px){
+
+    body{
+        padding: 12px;
+        padding-bottom: 120px; /* Espaço para o último louvor não ficar escondido */
+    }
+
+    .logo-bg{
+        bottom: 5px; /* Aproxima ainda mais da borda inferior no celular */
+    }
+
+    .logo-bg img{
+        max-height: 90px; /* Tamanho maior no celular (pode testar 95px ou 100px se quiser maior) */
+    }
+
+    .letra{
+        font-size: 15px;
+    }
 }
 
 /* Título */

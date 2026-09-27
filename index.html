@@ -24,16 +24,17 @@ body{
 /* Marca d'água */
 .logo-bg{
     position: fixed;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     pointer-events: none;
     z-index: -1;
 }
 
 .logo-bg img{
-    width: 500px;
-    opacity: 0.12;
+    width: min(80vw, 900px);
+    opacity: 100;
     mix-blend-mode: multiply;
 }
 

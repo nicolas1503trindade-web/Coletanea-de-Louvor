@@ -15,9 +15,28 @@ body{
 
     max-width: 1000px;
     margin: auto;
-    padding: 20px;
+    padding: 20px; /* Sem padding-bottom para não criar margem no fim */
 
     color: #222;
+}
+
+@media (max-width: 768px){
+
+    body{
+        padding: 12px; /* Mantém apenas o espaçamento padrão nas laterais */
+    }
+
+    .logo-bg{
+        bottom: 0px; /* Colado no limite inferior */
+    }
+
+    .logo-bg img{
+        max-height: 90px;
+    }
+
+    .letra{
+        font-size: 15px;
+    }
 }
 
 /* Tamanho Padrão (Notebooks e Monitores) */
@@ -27,14 +46,14 @@ body{
 }
 
 /* Regras exclusivas para Celular */
-@media (max-width: 800px){
+@media (max-width: 900px){
 
     .logo-bg{
         bottom: 5px; /* Aproxima ainda mais da borda inferior no celular */
     }
 
     .logo-bg img{
-        max-height: 100px; /* Tamanho maior no celular (pode testar 95px ou 100px se quiser maior) */
+        max-height: 900px; /* Tamanho maior no celular (pode testar 95px ou 100px se quiser maior) */
     }
 
     .letra{
